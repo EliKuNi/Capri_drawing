@@ -7,7 +7,7 @@ s = turtle.getscreen()
 t = turtle.Turtle()
 
 turtle.title("Capri")
-turtle.bgcolor("light green")
+turtle.bgcolor("dark green")
 
 HEAD_COLOR = 'purple'
 HEAD_SHADOW = ''
@@ -25,7 +25,7 @@ TAIL_COLOR = 'purple'
 TAIL_SHADOW = ''
 
 t.pensize(5)
-t.speed(20)
+t.speed(10)
 
 def body():
 
@@ -185,8 +185,6 @@ def body2():
     t.up()
     t.forward(70)
     t.down()
-    t.fillcolor(BODY_COLOR)
-    t.begin_fill()
     t.circle(-70, 60)
     t.left(20)
     t.circle(90, 80)
@@ -194,8 +192,6 @@ def body2():
     t.end_fill()
 
     # leg
-    t.fillcolor(LEG_COLOR)
-    t.begin_fill()
     t.circle(150, 45)
     t.left(95)
     t.end_fill()
@@ -203,8 +199,6 @@ def body2():
     t.right(15)
 
     # hoof
-    t.fillcolor("slategray")
-    t.begin_fill()
     t.forward(35)
     t.left(115)
     t.circle(60, 40)
@@ -265,6 +259,8 @@ def body2():
 
 def leg():
 
+    t.fillcolor(LEG_COLOR)
+    t.begin_fill()
     t.right(268)
     t.up()
     t.forward(198)
@@ -277,14 +273,11 @@ def leg():
     t.left(110)
 
     # hoof
-    t.fillcolor("slategray")
-    t.begin_fill()
     t.circle(60, 35)
     t.right(-40)
     t.forward(15)
     t.right(-130)
     t.circle(-60, 25)
-    t.end_fill()
 
     t.up()
     t.back(25)
@@ -303,6 +296,7 @@ def leg():
     t.circle(180, 33)
     t.right(-150)
     t.circle(-90, 30)
+    t.end_fill()
 
 def tail():
     t.up()
@@ -326,6 +320,7 @@ def tail():
     t.end_fill()
 
 def colouring():
+
     t.up()
     t.right(56)
     t.forward(79)
@@ -341,29 +336,192 @@ def colouring():
     t.right(7)
     t.circle(70, 75)
     t.right(-40)
-    #t.down()
     t.circle(60, 22)
     t.right(130)
     t.circle(60, -48)
     
     t.down()
     t.left(-119)
-    #t.fillcolor(BODY_COLOR)
-    #t.begin_fill()
+    t.fillcolor(BODY_COLOR)
+    t.begin_fill()
     t.circle(-70, 60)
     t.left(20)
     t.circle(90, 80)
-    t.right(473)
+    t.left(-15)
+    t.up()
+    t.circle(70, 50)
+    t.right(20)
+    t.circle(88, 80)
+    t.down()
+    t.pensize(3)
+    t.left(-20)
+    t.circle(-40, 60)
+    t.up()
+    t.circle(40, 65)
+    t.right(255)
+    t.forward(150)
     t.end_fill()
-    
-    
+    t.down()
+    t.pencolor("purple")
+    t.forward(20)
+    t.pensize(4)
+    t.right(1)
+    t.circle(-50, 60)
 
+    t.right(190)
+    t.fillcolor(BODY_COLOR)
+    t.begin_fill()
+    t.pencolor("black")
+    t.circle(-70, -80)
 
-
+    # jaw
+    t.right(105)
+    t.circle(-60, 30)
+    t.right(-70)
+    t.circle(-60, 45)
     t.end_fill()
 
-#def spirits():
-  
+    t.up()
+    t.fillcolor("purple")
+    t.begin_fill()
+    t.right(-100)
+    t.forward(10)
+    t.right(80)
+    t.circle(60, 170)
+    t.left(90)
+    t.circle(-70, 60)
+    t.end_fill()
+    t.right(183)
+    t.down()
+    t.circle(70, 75)
+
+    t.up()
+    t.right(60)
+    t.forward(120)
+    t.left(-60)
+    t.fillcolor(BODY_COLOR)
+    t.begin_fill()
+    t.down()
+    t.circle(40, 40)
+    t.right(105)
+    t.circle(40, 40)
+    t.right(19)
+    t.forward(15)
+    t.end_fill()
+
+    t.up()
+    t.forward(38)
+    t.right(60)
+    t.forward(8)
+    t.right(-60)
+    t.circle(-60, 48)
+
+    # colouring the leg
+    t.fillcolor(LEG_COLOR)
+    t.begin_fill()
+    t.down()
+    t.left(85)
+    t.circle(150, 45)
+    t.left(95)
+    t.circle(200, 28.5)
+    t.right(20)
+
+    # hoof
+    t.forward(35)
+    t.left(120)
+    t.circle(60, 40)
+    t.right(318)
+    t.circle(70, 20)
+    t.right(-125)
+    t.circle(-80, 22)
+
+    # continuation; leg and rest of the body
+    t.up()
+    t.back(25)
+    t.right(-240)
+    t.down()
+    t.forward(8)
+    t.right(40)
+    t.circle(10, 80)
+    t.right(60)
+    t.forward(40)
+    t.left(-151)
+    #t.forward(98)
+    t.left(30)
+    t.end_fill()
+
+    # colouring the hooves #
+
+    # hoof 1
+    t.up()
+    t.right(-295)
+    t.forward(68)
+    t.down()
+    t.fillcolor("black")
+    t.begin_fill()
+    t.forward(35)
+    t.left(120)
+    t.circle(60, 40)
+    t.right(318)
+    t.circle(70, 20)
+    t.right(-125)
+    t.circle(-80, 22)
+    t.end_fill()
+
+    # again some leg colour filling xD
+    t.up()
+    t.left(215)
+    t.forward(80)
+    t.right(117)
+    t.down()
+    t.pensize(5)
+    t.pencolor("purple")
+    t.fillcolor(LEG_COLOR)
+    t.begin_fill()
+    t.forward(100)
+    t.right(105)
+    t.forward(50)
+    t.end_fill()
+
+    # shoulder(?) xD 
+    t.pencolor("black")
+    t.right(170)
+    t.up()
+    t.forward(55)
+    t.left(-40)
+    t.down()
+    t.circle(-70, 100)
+
+    # hoof 2
+    t.up()
+    t.right(150)
+    t.forward(225)
+    t.fillcolor("black")
+    t.begin_fill()
+
+    t.right(-90)
+    t.down()
+    t.circle(130, 10)
+    t.left(100)
+    t.circle(60, 35)
+    t.right(-40)
+    t.forward(15)
+    t.right(-130)
+    t.circle(-60, 25)
+    t.end_fill()
+
+    t.up()
+    t.right(238)
+    t.forward(245)
+    t.left(85)
+    t.down()
+    t.pensize(7)
+    t.circle(-60, 120)
+    t.up()
+    t.right(-100)
+    t.forward(250)
+
+    
 body()
 head()
 eye()
@@ -372,6 +530,5 @@ body2()
 leg()
 tail()
 colouring()
-#spirits()
 
 t.screen.exitonclick()
