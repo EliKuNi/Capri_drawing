@@ -25,7 +25,7 @@ TAIL_COLOR = 'purple'
 TAIL_SHADOW = ''
 
 t.pensize(5)
-t.speed(10)
+t.speed(11)
 
 def body():
 
@@ -521,7 +521,8 @@ def colouring():
     t.right(-100)
     t.forward(250)
 
-    
+turtle.hideturtle()
+
 body()
 head()
 eye()
